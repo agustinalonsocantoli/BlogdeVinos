@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Agustin Alonso Cantoli">
+    <title>BlogDeVinos</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="icon" href=""">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__span">DeVinos</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlaces" href="cursos.html">Cursos</a>
+                    <a class="navegacion__enlaces" href="contacto.html">Contactos</a>
+                </nav>
+            </div>
+        </div> <!-- CIERRE DIV CONTENEDOR-->
+
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de Vinos con consejos y cursos</h2>
+            <p class="no-margin">Aprende de los expertos con los mejores consejos</p>
+        </div>
+
+    </header>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto</h3>
+
+        <div class="contacto__bg"></div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input 
+                   class="campo__entrada" 
+                   type="text" 
+                   placeholder="Tu Nombre" 
+                   id="nombre"
+                   required=""
+                   
+                > 
+
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="email">Email</label>
+                <input 
+                   class="campo__entrada" 
+                   type="email" 
+                   placeholder="Tu Email" 
+                   id="email"
+                   required=""
+                   
+                >
+
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea 
+                    class="campo__entrada campo__entrada--textarea" 
+                    id="mensaje"
+                    
+                ></textarea> 
+
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario"
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="footer">
+
+            <div class="footer__barra">
+                <a class="footer__logo" href="index.html">
+                    <h1 class="footer__logo--nombre no-margin centrar-texto">Blog<span class="footer__logo--span">DeVinos</span></h1>
+                </a>
+                <div class="footer__nav">
+                    <a class="footer__nav--enlaces" href="nosotros.html">Nosotros</a>
+                    <a class="footer__nav--enlaces" href="cursos.html">Cursos</a>
+                    <a class="footer__nav--enlaces" href="contacto.html">Contactos</a>
+                </div>
+            </div> <!-- CIERRE DIV CONTENEDOR-->
+    
+    </footer>
+    
+</body>
+</html>

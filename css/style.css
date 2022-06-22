@@ -1,0 +1,312 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --cafe: #784d3c;
+    --rojotoscano: #7C3030;
+    --vino: #722F37;
+    --tinto: #820000;
+
+
+    --fuenteparrafos: 'Open Sans', sans-serif;
+    --fuentetitulos: 'PT Sans', sans-serif;
+
+}
+
+html { 
+    font-size: 62.5%; /* Para modificar el valor del REM */
+    box-sizing: border-box; /* Debe estar siempre en mis hojas de CSS */
+    scroll-snap-type: y mandatory; /* (Y) significa de arriba a bajo agrega el scroll por partes despues debo marcarlo en las secciones */
+}
+
+*, *:before, *:after { /* Debe estar siempre en mis hojas CSS */
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteparrafos);
+    line-height: 2;
+    font-size: 1.6rem;
+}
+
+/* GLOBALES */
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuentetitulos);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.2rem;
+}
+img {
+    max-width: 100%;
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/banner.jpg);
+    height: 60rem;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    padding-top: 7rem;
+    line-height: 1.2;
+}
+.header__texto p {
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+.barra {
+    padding-top: 4rem;
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__span {
+    font-weight: 700;
+}
+
+.navegacion__enlaces{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    padding: .5rem 2rem;
+}
+.navegacion__enlaces:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/* MAIN Y ASIDE */
+@media (min-width: 768px) {
+    .contenido__ {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.boton {
+    color: var(--blanco);
+    padding: .5rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    display: block;
+    font-family: var(--fuentetitulos);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: .5rem 4rem;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: var(--negro);
+    border: none;
+}
+.boton--secundario {
+    background-color: var(--vino);
+}
+
+.articulo {
+    border-bottom: 2px solid var(--tinto);
+    margin-bottom: 1rem;
+}
+.articulo:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.curso__pre {
+    list-style: none;
+    border-bottom: 2px solid var(--tinto);
+    margin-bottom: 1rem;
+}
+.curso__pre:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.curso__pre h4 {
+    display: inline-block;
+    margin-top: 1rem;
+}
+.curso__pre--info {
+    font-family: var(--fuentetitulos);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.curso__pre--span {
+    font-family: var(--fuentetitulos);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 5rem;
+    background-color: var(--negro);
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 3rem 6rem 3rem 15rem;
+    }
+   .footer__barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .footer__nav {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+   }
+}
+
+.footer__nav--enlaces {
+    display: block;
+    color: var(--blanco);
+    text-align: center;
+    padding: .5rem 1rem;
+    font-size: 1.8rem;
+}
+.footer__nav--enlaces:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+.footer__logo {
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+.footer__logo--nombre {
+    font-weight: 400;
+}
+.footer__logo--span {
+    font-weight: 700;
+}
+
+/* NOSOTROS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+/* CURSOS */
+.cursos__ {
+    padding: 3rem 0;
+    border-bottom: 3px solid var(--tinto);
+}
+.cursos__:last-of-type {
+    padding-bottom: 0;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .cursos__ {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.informacion--texto {
+    font-family: var(--fuentetitulos);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.informacion--texto-span {
+    font-family: var(--fuentetitulos);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+/* CONTACTO */
+.contacto__bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+.campo__label {
+    flex: 0 0 9rem;
+}
+.campo__entrada {
+    flex: 1;
+    border: 1px solid var(--cafe);
+}
+.campo__entrada--textarea {
+    resize: none;
+    height: 20rem;
+}
+
+
